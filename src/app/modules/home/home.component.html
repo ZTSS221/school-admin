@@ -1,1 +1,143 @@
-<h1>home works!</h1>
+<div class="student-table">
+  <p-toolbar styleClass="mb-4 gap-2">
+    <ng-template pTemplate="left">
+      <button
+        pButton
+        pRipple
+        label="New"
+        class="p-button-success mr-2 me-5px"
+        (click)="openNew()"
+      ></button>
+      <button
+        pButton
+        pRipple
+        label="Delete"
+        class="p-button-danger"
+        (click)="deleteSelectedStudents()"
+        [disabled]="!selectedStudents || !selectedStudents.length"
+      ></button>
+    </ng-template>
+  </p-toolbar>
+
+  <p-table
+    #dt
+    [value]="students"
+    [rows]="10"
+    [paginator]="true"
+    [globalFilterFields]="[
+      'name',
+      'country.name',
+      'representative.name',
+      'status'
+    ]"
+    [tableStyle]="{ 'min-width': '75rem' }"
+    [(selection)]="selectedStudents"
+    [rowHover]="true"
+    dataKey="id"
+    currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+    [showCurrentPageReport]="true"
+  >
+    <ng-template pTemplate="caption">
+      <div class="flex align-items-center justify-content-between">
+        <span class="p-input-icon-left">
+          <i class="pi pi-search"></i>
+          <input pInputText type="text" placeholder="Search..." />
+          <!-- (input)="dt.filterGlobal($event.target.value, 'contains')" -->
+        </span>
+      </div>
+    </ng-template>
+    <ng-template pTemplate="header">
+      <tr>
+        <th style="width: 4rem">
+          <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+        </th>
+        <th pSortableColumn="name" style="min-width: 15rem">
+          Name <p-sortIcon field="name"></p-sortIcon>
+        </th>
+        <th>Image</th>
+        <th pSortableColumn="price">
+          Price <p-sortIcon field="price"></p-sortIcon>
+        </th>
+        <th pSortableColumn="category" style="min-width: 10rem">
+          Category <p-sortIcon field="category"></p-sortIcon>
+        </th>
+        <th></th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-student>
+      <tr>
+        <td>
+          <p-tableCheckbox [value]="student"></p-tableCheckbox>
+        </td>
+        <td>{{ student.name }}</td>
+        <td>
+          <img
+            [src]="
+              'https://primefaces.org/cdn/primeng/images/demo/product/' +
+              student.image
+            "
+            [alt]="student.name"
+            width="50"
+            class="shadow-4"
+          />
+        </td>
+        <td>{{ student.price | currency : "USD" }}</td>
+        <td>{{ student.category }}</td>
+        <td>
+          <button
+            pButton
+            pRipple
+            label="Delete"
+            class="p-button-danger"
+            (click)="deleteProduct(students)"
+          ></button>
+        </td>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="summary">
+      <div class="flex align-items-center justify-content-between">
+        In total there are {{ students ? students.length : 0 }} students.
+      </div>
+    </ng-template>
+  </p-table>
+</div>
+
+<p-dialog
+  header="Add Student"
+  [(visible)]="visible"
+  [style]="{ width: '50vw' }"
+>
+  <div>
+    <div class="relative my-10px">
+      <label for="name">Name <span class="required">*</span></label>
+      <input
+        type="text"
+        class="w-100 border rounded-6 placeholder-gray"
+        placeholder="name"
+        (ngModel)="(name)"
+        id="name"
+      />
+    </div>
+    <div class="relative my-10px">
+      <label for="class">Class <span class="required">*</span></label>
+      <input
+        type="text"
+        class="w-100 border rounded-6 placeholder-gray"
+        placeholder="Class"
+        (ngModel)="(class)"
+        id="class"
+      />
+    </div>
+    <div class="relative my-10px">
+      <label for="year">Year <span class="required">*</span></label>
+      <input
+        type="text"
+        class="w-100 border rounded-6 placeholder-gray"
+        placeholder="Year"
+        (ngModel)="(year)"
+        id="year"
+      />
+    </div>
+    <button class="btn-primary float-right" (click)="addStudent()">Add</button>
+  </div>
+</p-dialog>

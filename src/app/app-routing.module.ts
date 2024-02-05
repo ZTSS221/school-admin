@@ -1,17 +1,24 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { AuthGuard } from './components/guard/auth.guard';
 
 const routes: Routes = [
   {
+    path: '',
+    pathMatch: 'full',
+    redirectTo: 'auth',
+  },
+  {
     path: 'auth',
     loadChildren: () =>
-      import('../app/modules/login/login.module').then((m) => m.LoginModule),
+      import('./modules/login/login.module').then((m) => m.LoginModule),
   },
   {
     path: 'home',
+    canActivate: [AuthGuard],
     loadChildren: () =>
-      import('../app/modules//home/home.module').then((m) => m.HomeModule),
+      import('../app/modules/home/home.module').then((m) => m.HomeModule),
   },
   {
     path: 'student-detail',
@@ -22,8 +29,8 @@ const routes: Routes = [
   },
   {
     path: '**',
-    component: PageNotFoundComponent
-  }
+    component: PageNotFoundComponent,
+  },
 ];
 
 @NgModule({

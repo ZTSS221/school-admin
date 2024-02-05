@@ -5,18 +5,25 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { AuthServiceService } from './services/auth-service.service';
+import { HttpClientModule } from '@angular/common/http';
+import { MenuModule } from 'primeng/menu';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    MenuModule,
+    BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [AuthServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -5,4 +5,9 @@
 
 .auth-form input{
   min-width: 450px;
+  padding: 15px 10px;
+}
+
+.auth-form button{
+  margin-top: 10px;
 }
