@@ -1,1 +1,22 @@
-<p>student-profile works!</p>
+<div class="profile">
+  <div class="profile-picture">
+    <img
+      src="https://cdn.pixabay.com/photo/2015/03/04/22/35/avatar-659651_640.png"
+      alt="User Avatar"
+    />
+  </div>
+  <div class="profile-details">
+    <p><strong>Name: </strong> {{ studentDetails?.name }}</p>
+    <p><strong>Class: </strong> {{ studentDetails?.class }}</p>
+    <p><strong>Year: </strong>{{ studentDetails?.year }}</p>
+    <p><strong>Type: </strong> {{ studentDetails?.type }}</p>
+
+    <p><strong>Math Marks: </strong> {{ studentDetails?.subject?.math }}</p>
+    <p>
+      <strong>English Marks: </strong> {{ studentDetails?.subject?.english }}
+    </p>
+    <p>
+      <strong>Science Marks: </strong> {{ studentDetails?.subject?.science }}
+    </p>
+  </div>
+</div>

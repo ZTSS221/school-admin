@@ -1,13 +1,14 @@
-.auth-img {
+.background-image {
+  background-image: url("/assets/images/AuthImage.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.auth-form input{
+.auth-form input {
   min-width: 450px;
   padding: 15px 10px;
 }
 
-.auth-form button{
+.auth-form button {
   margin-top: 10px;
 }

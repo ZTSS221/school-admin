@@ -1,44 +1,245 @@
-import { Component } from '@angular/core';
-
+import { Component, ViewChild, ChangeDetectorRef } from '@angular/core';
+import { ConfirmationService } from 'primeng/api';
+import { Table } from 'primeng/table';
+import { HomeService } from 'src/app/services/home.service';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { DataSharingService } from 'src/app/services/data-sharing.service';
+interface classes {
+  name: string;
+  value: string;
+}
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
-students = [{
-  id: '1000',
-  code: 'f230fh0g3',
-  name: 'Bamboo Watch',
-  description: 'Product Description',
-  image: 'bamboo-watch.jpg',
-  price: 65,
-  category: 'Accessories',
-  quantity: 24,
-  inventoryStatus: 'INSTOCK',
-  rating: 5
-}]
+  @ViewChild('dt') dataTable!: Table;
+  studentForm!: FormGroup;
+  classTypes: classes[] | undefined;
+  selectedClassType: any;
+  selectedYear: any;
+  classes: any;
+  selectedClass: any;
+  maxDate!: Date;
+  isCalenderActive: boolean = true;
+  classArray: any;
+  visible: boolean = false;
+  selectedStudents: any = [];
+  students: any = [];
+  name: string = '';
+  class: string = '';
+  year: string = '';
+  messages: any;
 
-selectedStudents: any = [];
-visible: boolean = false;
-name: string = '';
-class: string = '';
-year: string = '';
+  constructor(
+    private homeService: HomeService,
+    private dataSharingService: DataSharingService,
+    private router: Router,
+    private confirmationService: ConfirmationService,
+    private formBuilder: FormBuilder,
+    private cdr: ChangeDetectorRef
+  ) {
+    const currentYear = new Date().getFullYear();
+    this.maxDate = new Date(currentYear, 11, 31);
+    console.log(this.maxDate);
+  }
 
-openNew(){
-  this.visible = true;
-}
+  ngOnInit() {
+    this.students = this.homeService.getArrayData('students') || [];
+    this.studentForm = this.formBuilder.group({
+      id: ['', Validators.required],
+      name: ['', Validators.required],
+      type: ['', Validators.required],
+      class: ['', Validators.required],
+      year: ['', Validators.required],
+      imageUrl: [''],
+      subject: this.formBuilder.group({
+        math: ['', Validators.required],
+        english: ['', Validators.required],
+        science: ['', Validators.required],
+      }),
+    });
+    this.getClassTypes();
+    this.getClassesByclassType();
+    console.log(this.students.length == 0);
+    if (this.students.length == 0) {
+      this.getAllStudents();
+    }
+  }
+  onChangeFilter(ev: any) {
+    console.log(ev.value);
+    if (ev.value != null) {
+      const filteredClasses = this.classArray.filter((cls: any) => {
+        return cls.type == ev.value.value;
+      });
+      this.classes = filteredClasses;
+      this.isCalenderActive = false;
+      this.selectedYear = this.maxDate as any;
+    }
+  }
+  applyFilterGlobal($event: any, stringVal: any) {
+    console.log(($event.target as HTMLInputElement).value);
+    this.dataTable.filterGlobal(
+      ($event.target as HTMLInputElement).value,
+      stringVal
+    );
+  }
+  openNew() {
+    this.visible = true;
+  }
 
-deleteSelectedStudents(){
+  deleteStudent(event: any, id: any) {
+    this.deleteConfirmDialogue(event, id);
+  }
 
-}
+  deleteConfirmDialogue(event: Event, id: any) {
+    this.confirmationService.confirm({
+      target: event.target as EventTarget,
+      message: 'Are you sure that you want to delete?',
+      header: 'Confirmation',
+      icon: 'pi pi-exclamation-triangle',
+      acceptIcon: 'none',
+      rejectIcon: 'none',
+      rejectButtonStyleClass: 'p-button-text',
+      accept: () => {
+        this.students = this.students.filter(
+          (student: any) => student.id !== id
+        );
+        this.homeService.saveArrayData('students', this.students);
+      },
+      reject: () => {},
+    });
+  }
+  addStudent() {
+    this.studentForm.patchValue({
+      id: this.generateRandomString(10),
+      type: this.getClassCategory(this.studentForm.value.class),
+    });
+    if (this.studentForm.valid) {
+      this.students.unshift(this.studentForm.value);
+      this.homeService.saveArrayData('students', this.students);
+      this.studentForm.reset();
+      this.visible = false;
+      this.cdr.detectChanges();
+    } else {
+      this.messages = [
+        {
+          severity: 'error',
+          summary: 'Error',
+          detail: 'Please fill required details',
+        },
+      ];
+    }
+  }
 
-deleteProduct(event: any){
+  onYearChange(event: any) {
+    // Handle the year change event here
+    console.log(this.selectedYear);
+  }
+  onClearFilter(ev: any) {
+    console.log(ev);
+    this.selectedClassType = undefined;
+    this.selectedClass = undefined;
+    this.classes = [];
+    this.isCalenderActive = true;
+    this.selectedYear = undefined;
+    this.getAllStudents();
+  }
 
-}
+  getClassTypes() {
+    this.homeService.getClassType().subscribe({
+      next: (response: any) => {
+        this.classTypes = response;
+      },
+    });
+  }
+  getClassesByclassType() {
+    this.homeService.getClasses().subscribe({
+      next: (response: any) => {
+        this.classArray = response;
+      },
+    });
+  }
 
-addStudent(){
-  
-}
+  onSubmitFilters() {
+    const dateString = this.selectedYear;
+    const date = new Date(dateString);
+    const year = date.getFullYear();
+    console.log(year);
 
+    // this.homeService
+    //   .getStudents(
+    //     this.selectedClassType.value,
+    //     year,
+    //     this.selectedClass.classValue
+    //   )
+    //   .subscribe({
+    //     next: (response) => {
+    //       console.log(response);
+    //       this.students = response;
+    //     },
+    //     error: (error) => {
+    //       console.error('An error occurred:', error);
+    //     },
+    //   });
+    this.students = this.students.filter((student: any) => {
+      return (
+        student.type == this.selectedClassType.value &&
+        student.year == year &&
+        student.class == this.selectedClass.classValue
+      );
+    });
+  }
+  getAllStudents() {
+    this.homeService.getAllStudents().subscribe({
+      next: (res) => {
+        this.students = res;
+        this.homeService.saveArrayData('students', this.students);
+      },
+      error: (err) => {},
+    });
+  }
+  generateRandomString(length: any) {
+    const characters =
+      'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    let result = '';
+
+    for (let i = 0; i < length; i++) {
+      result += characters.charAt(
+        Math.floor(Math.random() * characters.length)
+      );
+    }
+
+    return result;
+  }
+  getClassCategory(className: any) {
+    if (className.toLowerCase().includes('kg')) {
+      return 'kgs';
+    } else {
+      const classNumber = parseInt(className, 10);
+      if (classNumber >= 2 && classNumber <= 6) {
+        return 'primary';
+      } else if (classNumber >= 7 && classNumber <= 10) {
+        return 'secondary';
+      } else {
+        return 'kgs'; // Or you can handle other cases according to your requirement
+      }
+    }
+  }
+  viewStudent(student: any) {
+    this.router.navigate(['/student-profile']);
+    this.dataSharingService.sendTabChangeEvent(student);
+  }
+  onEditStart(event: any) {
+    console.log('Editing started', event);
+    // You can perform any actions you need when editing starts here
+  }
+
+  onEditComplete(event: any) {
+    console.log('Editing completed', event);
+    // You can perform any actions you need when editing completes here
+    this.homeService.saveArrayData('students', this.students);
+  }
 }

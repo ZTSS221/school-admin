@@ -9,12 +9,13 @@ import { AuthServiceService } from './services/auth-service.service';
 import { HttpClientModule } from '@angular/common/http';
 import { MenuModule } from 'primeng/menu';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HomeService } from './services/home.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    PageNotFoundComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +24,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MenuModule,
     BrowserAnimationsModule
   ],
-  providers: [AuthServiceService],
+  providers: [AuthServiceService, HomeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

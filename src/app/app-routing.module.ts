@@ -18,10 +18,10 @@ const routes: Routes = [
     path: 'home',
     canActivate: [AuthGuard],
     loadChildren: () =>
-      import('../app/modules/home/home.module').then((m) => m.HomeModule),
+      import('./modules/home/home.module').then((m) => m.HomeModule),
   },
   {
-    path: 'student-detail',
+    path: 'student-profile/:id',
     loadChildren: () =>
       import('./modules/student-profile/student-profile.module').then(
         (m) => m.StudentProfileModule

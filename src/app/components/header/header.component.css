@@ -2,7 +2,9 @@
   height: 60px;
   margin: 0;
   background-color: #101010;
-  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
 }
 
 .user-icon {
@@ -41,4 +43,25 @@
   gap: 10px;
   margin-right: 10px;
   cursor: pointer;
+}
+
+.navbar ul li {
+  color: #fff;
+  list-style: none;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.navbar ul li:hover,
+.navbar ul li.active {
+  color: #c7c5c5;
+}
+
+.navbar ul {
+  padding-left: 10px;
+}
+
+.navbar .v-divider {
+  border: 1px solid #fff;
+  margin: 10px;
 }

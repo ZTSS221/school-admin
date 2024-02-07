@@ -3,15 +3,8 @@ import { CommonModule } from '@angular/common';
 import { StudentProfileComponent } from './student-profile.component';
 import { StudentProfileRoutingModule } from './student-profile-routing.module';
 
-
-
 @NgModule({
-  declarations: [
-    StudentProfileComponent
-  ],
-  imports: [
-    CommonModule,
-    StudentProfileRoutingModule
-  ]
+  declarations: [StudentProfileComponent],
+  imports: [CommonModule, StudentProfileRoutingModule],
 })
-export class StudentProfileModule { }
+export class StudentProfileModule {}

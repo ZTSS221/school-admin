@@ -11,12 +11,6 @@ export class HeaderComponent {
 
   items = [
     {
-      label: 'Profile',
-      command: () => {
-        // this.update();
-      },
-    },
-    {
       label: 'Logout',
       command: () => {
         this.logOut();

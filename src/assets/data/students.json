@@ -1,0 +1,1557 @@
+[
+    {
+        "type": "kgs",
+        "year": "2024",
+        "class": "kg1",
+        "name": "Emma Smith",
+        "imageUrl": "https://example.com/student1.jpg",
+        "id": "abc123",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "primary",
+        "year": "2024",
+        "class": "4",
+        "name": "Liam Jones",
+        "imageUrl": "https://example.com/student5.jpg",
+        "id": "mno345",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "secondary",
+        "year": "2024",
+        "class": "10",
+        "name": "Noah Davis",
+        "imageUrl": "https://example.com/student6.jpg",
+        "id": "pqr678",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "primary",
+        "year": "2024",
+        "class": "3",
+        "name": "James Johnson",
+        "imageUrl": "https://example.com/student2.jpg",
+        "id": "def456",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "secondary",
+        "year": "2024",
+        "class": "9",
+        "name": "Sophia Williams",
+        "imageUrl": "https://example.com/student3.jpg",
+        "id": "ghi789",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "kgs",
+        "year": "2024",
+        "class": "kg2",
+        "name": "Olivia Brown",
+        "imageUrl": "https://example.com/student4.jpg",
+        "id": "jkl012",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "kgs",
+        "year": "2024",
+        "class": "kg1",
+        "name": "Isabella Martinez",
+        "imageUrl": "https://example.com/student7.jpg",
+        "id": "stu901",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "primary",
+        "year": "2024",
+        "class": "5",
+        "name": "William Wilson",
+        "imageUrl": "https://example.com/student8.jpg",
+        "id": "vwx234",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "secondary",
+        "year": "2024",
+        "class": "7",
+        "name": "Ava Anderson",
+        "imageUrl": "https://example.com/student9.jpg",
+        "id": "yza567",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "kgs",
+        "year": "2024",
+        "class": "kg2",
+        "name": "Mia Taylor",
+        "imageUrl": "https://example.com/student10.jpg",
+        "id": "bcd890",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "kgs",
+        "year": "2024",
+        "class": "1",
+        "name": "Ethan White",
+        "imageUrl": "https://example.com/student11.jpg",
+        "id": "efg123",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "secondary",
+        "year": "2024",
+        "class": "8",
+        "name": "Charlotte Garcia",
+        "imageUrl": "https://example.com/student12.jpg",
+        "id": "hij456",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "kgs",
+        "year": "2024",
+        "class": "kg1",
+        "name": "Michael Rodriguez",
+        "imageUrl": "https://example.com/student13.jpg",
+        "id": "klm789",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "primary",
+        "year": "2024",
+        "class": "2",
+        "name": "Emily Lopez",
+        "imageUrl": "https://example.com/student14.jpg",
+        "id": "nop012",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "secondary",
+        "year": "2024",
+        "class": "6",
+        "name": "Alexander Hernandez",
+        "imageUrl": "https://example.com/student15.jpg",
+        "id": "qrs345",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "kgs",
+        "year": "2024",
+        "class": "kg2",
+        "name": "Madison Gonzales",
+        "imageUrl": "https://example.com/student16.jpg",
+        "id": "tuv678",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "primary",
+        "year": "2024",
+        "class": "3",
+        "name": "Daniel Perez",
+        "imageUrl": "https://example.com/student17.jpg",
+        "id": "wxy901",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "secondary",
+        "year": "2024",
+        "class": "9",
+        "name": "Chloe Washington",
+        "imageUrl": "https://example.com/student18.jpg",
+        "id": "zab234",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "kgs",
+        "year": "2024",
+        "class": "kg1",
+        "name": "Benjamin Scott",
+        "imageUrl": "https://example.com/student19.jpg",
+        "id": "cde567",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "primary",
+        "year": "2024",
+        "class": "4",
+        "name": "Mason Lewis",
+        "imageUrl": "https://example.com/student20.jpg",
+        "id": "efg890",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "secondary",
+        "year": "2024",
+        "class": "7",
+        "name": "Amelia Young",
+        "imageUrl": "https://example.com/student21.jpg",
+        "id": "hij123",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "kgs",
+        "year": "2024",
+        "class": "kg2",
+        "name": "Elijah Martinez",
+        "imageUrl": "https://example.com/student22.jpg",
+        "id": "klm456",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "kgs",
+        "year": "2024",
+        "class": "1",
+        "name": "Avery Adams",
+        "imageUrl": "https://example.com/student23.jpg",
+        "id": "nop789",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "secondary",
+        "year": "2024",
+        "class": "8",
+        "name": "Logan Carter",
+        "imageUrl": "https://example.com/student24.jpg",
+        "id": "qrs012",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "kgs",
+        "year": "2024",
+        "class": "kg1",
+        "name": "Harper Ward",
+        "imageUrl": "https://example.com/student25.jpg",
+        "id": "tuv345",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "primary",
+        "year": "2024",
+        "class": "2",
+        "name": "Evelyn Bell",
+        "imageUrl": "https://example.com/student26.jpg",
+        "id": "wxy678",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "secondary",
+        "year": "2024",
+        "class": "6",
+        "name": "Lucas Nelson",
+        "imageUrl": "https://example.com/student27.jpg",
+        "id": "zab901",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "kgs",
+        "year": "2024",
+        "class": "kg2",
+        "name": "Addison Rivera",
+        "imageUrl": "https://example.com/student28.jpg",
+        "id": "cde234",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "primary",
+        "year": "2024",
+        "class": "3",
+        "name": "Gabriel Hayes",
+        "imageUrl": "https://example.com/student29.jpg",
+        "id": "efg567",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "secondary",
+        "year": "2024",
+        "class": "9",
+        "name": "Aria Stewart",
+        "imageUrl": "https://example.com/student30.jpg",
+        "id": "hij890",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "kgs",
+        "year": "2024",
+        "class": "kg1",
+        "name": "Jackson Price",
+        "imageUrl": "https://example.com/student31.jpg",
+        "id": "klm123",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "primary",
+        "year": "2024",
+        "class": "4",
+        "name": "Scarlett Long",
+        "imageUrl": "https://example.com/student32.jpg",
+        "id": "nop456",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "secondary",
+        "year": "2024",
+        "class": "10",
+        "name": "Matthew King",
+        "imageUrl": "https://example.com/student33.jpg",
+        "id": "qrs789",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "kgs",
+        "year": "2024",
+        "class": "kg2",
+        "name": "Luna Lee",
+        "imageUrl": "https://example.com/student34.jpg",
+        "id": "tuv012",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "primary",
+        "year": "2024",
+        "class": "5",
+        "name": "Henry Foster",
+        "imageUrl": "https://example.com/student35.jpg",
+        "id": "wxy345",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "secondary",
+        "year": "2024",
+        "class": "7",
+        "name": "Zoe Richardson",
+        "imageUrl": "https://example.com/student36.jpg",
+        "id": "zab678",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "kgs",
+        "year": "2024",
+        "class": "kg1",
+        "name": "Nathan Powell",
+        "imageUrl": "https://example.com/student37.jpg",
+        "id": "cde901",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "kgs",
+        "year": "2024",
+        "class": "1",
+        "name": "Sarah Cook",
+        "imageUrl": "https://example.com/student38.jpg",
+        "id": "efg234",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "secondary",
+        "year": "2024",
+        "class": "8",
+        "name": "David Morgan",
+        "imageUrl": "https://example.com/student39.jpg",
+        "id": "hij567",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "kgs",
+        "year": "2024",
+        "class": "kg2",
+        "name": "Layla Cooper",
+        "imageUrl": "https://example.com/student40.jpg",
+        "id": "klm890",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "primary",
+        "year": "2024",
+        "class": "2",
+        "name": "Jacob Murphy",
+        "imageUrl": "https://example.com/student41.jpg",
+        "id": "nop123",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "secondary",
+        "year": "2024",
+        "class": "6",
+        "name": "Avery Rivera",
+        "imageUrl": "https://example.com/student42.jpg",
+        "id": "qrs456",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "kgs",
+        "year": "2024",
+        "class": "kg1",
+        "name": "Grace Wood",
+        "imageUrl": "https://example.com/student43.jpg",
+        "id": "tuv789",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "primary",
+        "year": "2024",
+        "class": "3",
+        "name": "Ella Cooper",
+        "imageUrl": "https://example.com/student44.jpg",
+        "id": "wxy012",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "secondary",
+        "year": "2024",
+        "class": "9",
+        "name": "Benjamin Martinez",
+        "imageUrl": "https://example.com/student45.jpg",
+        "id": "zab345",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "kgs",
+        "year": "2024",
+        "class": "kg2",
+        "name": "Victoria Ross",
+        "imageUrl": "https://example.com/student46.jpg",
+        "id": "cde678",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "primary",
+        "year": "2024",
+        "class": "4",
+        "name": "Jack Morgan",
+        "imageUrl": "https://example.com/student47.jpg",
+        "id": "efg901",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "secondary",
+        "year": "2024",
+        "class": "10",
+        "name": "Emma Turner",
+        "imageUrl": "https://example.com/student48.jpg",
+        "id": "hij234",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "kgs",
+        "year": "2024",
+        "class": "kg1",
+        "name": "Mason Baker",
+        "imageUrl": "https://example.com/student49.jpg",
+        "id": "klm567",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "primary",
+        "year": "2024",
+        "class": "5",
+        "name": "Abigail Hill",
+        "imageUrl": "https://example.com/student50.jpg",
+        "id": "nop890",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "secondary",
+        "year": "2024",
+        "class": "7",
+        "name": "Ryan Bailey",
+        "imageUrl": "https://example.com/student51.jpg",
+        "id": "qrs123",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "kgs",
+        "year": "2024",
+        "class": "kg2",
+        "name": "Sophia Bell",
+        "imageUrl": "https://example.com/student52.jpg",
+        "id": "tuv456",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "kgs",
+        "year": "2024",
+        "class": "1",
+        "name": "Luke Ward",
+        "imageUrl": "https://example.com/student53.jpg",
+        "id": "wxy789",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "secondary",
+        "year": "2024",
+        "class": "8",
+        "name": "Anna Murphy",
+        "imageUrl": "https://example.com/student54.jpg",
+        "id": "zab012",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "kgs",
+        "year": "2024",
+        "class": "kg1",
+        "name": "John Thompson",
+        "imageUrl": "https://example.com/student55.jpg",
+        "id": "cde345",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "primary",
+        "year": "2024",
+        "class": "2",
+        "name": "Mia Russell",
+        "imageUrl": "https://example.com/student56.jpg",
+        "id": "efg678",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "secondary",
+        "year": "2024",
+        "class": "6",
+        "name": "Isaac Hayes",
+        "imageUrl": "https://example.com/student57.jpg",
+        "id": "hij901",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "kgs",
+        "year": "2024",
+        "class": "kg2",
+        "name": "Samantha Cole",
+        "imageUrl": "https://example.com/student58.jpg",
+        "id": "klm234",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "primary",
+        "year": "2024",
+        "class": "3",
+        "name": "David Turner",
+        "imageUrl": "https://example.com/student59.jpg",
+        "id": "nop567",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "secondary",
+        "year": "2024",
+        "class": "9",
+        "name": "Sophie Cooper",
+        "imageUrl": "https://example.com/student60.jpg",
+        "id": "qrs890",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "kgs",
+        "year": "2024",
+        "class": "kg1",
+        "name": "Tyler Kelly",
+        "imageUrl": "https://example.com/student61.jpg",
+        "id": "tuv123",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "primary",
+        "year": "2024",
+        "class": "4",
+        "name": "Ethan Simmons",
+        "imageUrl": "https://example.com/student62.jpg",
+        "id": "wxy456",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "secondary",
+        "year": "2024",
+        "class": "10",
+        "name": "Madeline Price",
+        "imageUrl": "https://example.com/student63.jpg",
+        "id": "zab789",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "kgs",
+        "year": "2024",
+        "class": "kg2",
+        "name": "Aiden Stewart",
+        "imageUrl": "https://example.com/student64.jpg",
+        "id": "cde012",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "primary",
+        "year": "2024",
+        "class": "5",
+        "name": "Harper Ward",
+        "imageUrl": "https://example.com/student65.jpg",
+        "id": "efg345",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "secondary",
+        "year": "2024",
+        "class": "7",
+        "name": "Levi Hayes",
+        "imageUrl": "https://example.com/student66.jpg",
+        "id": "hij678",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "kgs",
+        "year": "2024",
+        "class": "kg1",
+        "name": "Grace Bell",
+        "imageUrl": "https://example.com/student67.jpg",
+        "id": "klm901",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "kgs",
+        "year": "2024",
+        "class": "1",
+        "name": "Lucas Adams",
+        "imageUrl": "https://example.com/student68.jpg",
+        "id": "nop234",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "secondary",
+        "year": "2024",
+        "class": "8",
+        "name": "Ava Martinez",
+        "imageUrl": "https://example.com/student69.jpg",
+        "id": "qrs567",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "kgs",
+        "year": "2024",
+        "class": "kg2",
+        "name": "Leo Garcia",
+        "imageUrl": "https://example.com/student70.jpg",
+        "id": "tuv890",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "primary",
+        "year": "2024",
+        "class": "2",
+        "name": "Emily Richardson",
+        "imageUrl": "https://example.com/student71.jpg",
+        "id": "wxy123",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "secondary",
+        "year": "2024",
+        "class": "6",
+        "name": "Caleb Gonzalez",
+        "imageUrl": "https://example.com/student72.jpg",
+        "id": "zab456",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "kgs",
+        "year": "2024",
+        "class": "kg1",
+        "name": "Ella Clark",
+        "imageUrl": "https://example.com/student73.jpg",
+        "id": "cde789",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "primary",
+        "year": "2024",
+        "class": "3",
+        "name": "Michael Baker",
+        "imageUrl": "https://example.com/student74.jpg",
+        "id": "efg012",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "secondary",
+        "year": "2024",
+        "class": "9",
+        "name": "Emma Peterson",
+        "imageUrl": "https://example.com/student75.jpg",
+        "id": "hij345",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "kgs",
+        "year": "2024",
+        "class": "kg2",
+        "name": "Logan Martin",
+        "imageUrl": "https://example.com/student76.jpg",
+        "id": "klm678",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "primary",
+        "year": "2024",
+        "class": "4",
+        "name": "Charlotte Cook",
+        "imageUrl": "https://example.com/student77.jpg",
+        "id": "nop901",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "secondary",
+        "year": "2024",
+        "class": "10",
+        "name": "Liam Allen",
+        "imageUrl": "https://example.com/student78.jpg",
+        "id": "qrs234",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "kgs",
+        "year": "2024",
+        "class": "kg1",
+        "name": "Olivia Foster",
+        "imageUrl": "https://example.com/student79.jpg",
+        "id": "tuv567",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "primary",
+        "year": "2024",
+        "class": "5",
+        "name": "Noah Gray",
+        "imageUrl": "https://example.com/student80.jpg",
+        "id": "wxy890",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "secondary",
+        "year": "2024",
+        "class": "7",
+        "name": "Sophie Lee",
+        "imageUrl": "https://example.com/student81.jpg",
+        "id": "zab123",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "kgs",
+        "year": "2024",
+        "class": "kg2",
+        "name": "Ethan Ward",
+        "imageUrl": "https://example.com/student82.jpg",
+        "id": "cde456",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "kgs",
+        "year": "2024",
+        "class": "1",
+        "name": "Aria Rivera",
+        "imageUrl": "https://example.com/student83.jpg",
+        "id": "efg789",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "secondary",
+        "year": "2024",
+        "class": "8",
+        "name": "Lucas Kelly",
+        "imageUrl": "https://example.com/student84.jpg",
+        "id": "hij012",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "kgs",
+        "year": "2024",
+        "class": "kg1",
+        "name": "Evelyn Adams",
+        "imageUrl": "https://example.com/student85.jpg",
+        "id": "klm345",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "primary",
+        "year": "2024",
+        "class": "2",
+        "name": "Daniel Martinez",
+        "imageUrl": "https://example.com/student86.jpg",
+        "id": "nop678",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "secondary",
+        "year": "2024",
+        "class": "6",
+        "name": "Harper Long",
+        "imageUrl": "https://example.com/student87.jpg",
+        "id": "qrs901",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "kgs",
+        "year": "2024",
+        "class": "kg2",
+        "name": "Mia Green",
+        "imageUrl": "https://example.com/student88.jpg",
+        "id": "tuv234",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "primary",
+        "year": "2024",
+        "class": "3",
+        "name": "James Thompson",
+        "imageUrl": "https://example.com/student89.jpg",
+        "id": "wxy567",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "secondary",
+        "year": "2024",
+        "class": "9",
+        "name": "Emily White",
+        "imageUrl": "https://example.com/student90.jpg",
+        "id": "zab890",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "kgs",
+        "year": "2024",
+        "class": "kg1",
+        "name": "Michael Hill",
+        "imageUrl": "https://example.com/student91.jpg",
+        "id": "cde123",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "primary",
+        "year": "2024",
+        "class": "4",
+        "name": "Emma Powell",
+        "imageUrl": "https://example.com/student92.jpg",
+        "id": "efg456",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "secondary",
+        "year": "2024",
+        "class": "10",
+        "name": "William Hayes",
+        "imageUrl": "https://example.com/student93.jpg",
+        "id": "hij789",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "kgs",
+        "year": "2024",
+        "class": "kg2",
+        "name": "Oliver Cook",
+        "imageUrl": "https://example.com/student94.jpg",
+        "id": "klm012",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "primary",
+        "year": "2024",
+        "class": "5",
+        "name": "Charlotte Gonzalez",
+        "imageUrl": "https://example.com/student95.jpg",
+        "id": "nop345",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "secondary",
+        "year": "2024",
+        "class": "7",
+        "name": "Aiden Adams",
+        "imageUrl": "https://example.com/student96.jpg",
+        "id": "qrs678",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "kgs",
+        "year": "2024",
+        "class": "kg1",
+        "name": "Ava Hall",
+        "imageUrl": "https://example.com/student97.jpg",
+        "id": "tuv901",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "kgs",
+        "year": "2024",
+        "class": "1",
+        "name": "Daniel Wright",
+        "imageUrl": "https://example.com/student98.jpg",
+        "id": "wxy234",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "secondary",
+        "year": "2024",
+        "class": "8",
+        "name": "Lily Foster",
+        "imageUrl": "https://example.com/student99.jpg",
+        "id": "zab567",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "kgs",
+        "year": "2024",
+        "class": "kg2",
+        "name": "Ethan Turner",
+        "imageUrl": "https://example.com/student100.jpg",
+        "id": "cde890",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "kgs",
+        "year": "2023",
+        "class": "1",
+        "name": "Ethan Hernandez",
+        "imageUrl": "https://example.com/student15.jpg",
+        "id": "kg2023_15",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "secondary",
+        "year": "2023",
+        "class": "7",
+        "name": "Sophia Garcia",
+        "imageUrl": "https://example.com/student4.jpg",
+        "id": "kg2023_4",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "kgs",
+        "year": "2023",
+        "class": "kg1",
+        "name": "Daniel Martinez",
+        "imageUrl": "https://example.com/student5.jpg",
+        "id": "kg2023_5",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "primary",
+        "year": "2023",
+        "class": "3",
+        "name": "Isabella Wilson",
+        "imageUrl": "https://example.com/student10.jpg",
+        "id": "kg2023_10",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "secondary",
+        "year": "2023",
+        "class": "9",
+        "name": "William Anderson",
+        "imageUrl": "https://example.com/student9.jpg",
+        "id": "kg2023_9",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "kgs",
+        "year": "2023",
+        "class": "kg2",
+        "name": "Charlotte Martinez",
+        "imageUrl": "https://example.com/student16.jpg",
+        "id": "kg2023_16",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "primary",
+        "year": "2023",
+        "class": "2",
+        "name": "Noah Martinez",
+        "imageUrl": "https://example.com/student13.jpg",
+        "id": "kg2023_13",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "secondary",
+        "year": "2023",
+        "class": "8",
+        "name": "Amelia Taylor",
+        "imageUrl": "https://example.com/student18.jpg",
+        "id": "kg2023_18",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "kgs",
+        "year": "2023",
+        "class": "kg1",
+        "name": "James Lee",
+        "imageUrl": "https://example.com/student7.jpg",
+        "id": "kg2023_7",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "primary",
+        "year": "2023",
+        "class": "4",
+        "name": "Mia Lopez",
+        "imageUrl": "https://example.com/student14.jpg",
+        "id": "kg2023_14",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "kgs",
+        "year": "2023",
+        "class": "kg1",
+        "name": "Lucas Martin",
+        "imageUrl": "https://example.com/student20.jpg",
+        "id": "kg2023_20",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "secondary",
+        "year": "2023",
+        "class": "10",
+        "name": "Olivia Brown",
+        "imageUrl": "https://example.com/student11.jpg",
+        "id": "kg2023_11",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "primary",
+        "year": "2023",
+        "class": "5",
+        "name": "Liam Moore",
+        "imageUrl": "https://example.com/student2.jpg",
+        "id": "kg2023_2",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "secondary",
+        "year": "2023",
+        "class": "11",
+        "name": "Ava Clark",
+        "imageUrl": "https://example.com/student12.jpg",
+        "id": "kg2023_12",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "kgs",
+        "year": "2023",
+        "class": "kg2",
+        "name": "Benjamin King",
+        "imageUrl": "https://example.com/student3.jpg",
+        "id": "kg2023_3",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "primary",
+        "year": "2023",
+        "class": "6",
+        "name": "Harper Young",
+        "imageUrl": "https://example.com/student6.jpg",
+        "id": "kg2023_6",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "secondary",
+        "year": "2023",
+        "class": "10",
+        "name": "Elijah White",
+        "imageUrl": "https://example.com/student17.jpg",
+        "id": "kg2023_17",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "kgs",
+        "year": "2023",
+        "class": "kg2",
+        "name": "Michael Lewis",
+        "imageUrl": "https://example.com/student19.jpg",
+        "id": "kg2023_19",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "primary",
+        "year": "2023",
+        "class": "7",
+        "name": "Evelyn Martinez",
+        "imageUrl": "https://example.com/student8.jpg",
+        "id": "kg2023_8",
+        "subject": {
+            "math": 50,
+            "english": 50,
+            "science": 50
+        }
+    },
+    {
+        "type": "secondary",
+        "year": "2023",
+        "class": "10",
+        "name": "Logan Johnson",
+        "imageUrl": "https://example.com/student1.jpg",
+        "id": "kg2023_1"
+    }
+]

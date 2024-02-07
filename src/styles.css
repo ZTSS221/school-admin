@@ -13,7 +13,7 @@ body {
   height: 100%;
   margin: 0;
   font-family: "Poppins";
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .absolute {
@@ -85,8 +85,8 @@ div.required {
   margin-bottom: 10px !important;
 }
 
-.me-5px{
-    margin-right: 5px;
+.me-5px {
+  margin-right: 5px;
 }
 
 .float-right {
@@ -155,4 +155,9 @@ label {
 .auth-info {
   font-size: 12px;
   font-size: 400;
+}
+
+.p-dialog-mask {
+  background: #0006;
+  pointer-events: all;
 }

@@ -1,10 +1,16 @@
 <nav class="navbar">
   <div class="d-flex">
-    <h1 class="navbar-brand">School Admin</h1>
+    <div class="d-flex">
+      <h1 class="navbar-brand">School Admin</h1>
+      <div class="v-divider"></div>
+      <ul>
+        <li routerLink="/home" routerLinkActive="active">Home</li>
+      </ul>
+    </div>
     <div>
       <div class="user" (click)="menu.toggle($event)">
-        <span class="username">{{userDetails}}</span>
-        <span class="user-icon">{{userDetails.charAt(0)}}</span>
+        <span class="username">{{ userDetails }}</span>
+        <span class="user-icon">{{ userDetails.charAt(0) }}</span>
       </div>
       <p-menu #menu [model]="items" [popup]="true"></p-menu>
     </div>

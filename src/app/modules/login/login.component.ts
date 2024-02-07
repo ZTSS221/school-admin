@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent {
   loginForm!: FormGroup;
-  errorMessage: string = '';
+  errorMessage: any = '';
   constructor(
     private formBuilder: FormBuilder,
     private authService: AuthServiceService,
@@ -27,31 +27,45 @@ export class LoginComponent {
       password: ['', Validators.required],
     });
   }
-  
+
   login(): void {
     if (this.loginForm.invalid) {
       return;
     }
-    this.authService.login(this.loginForm.value.username, this.loginForm.value.password).subscribe({
-      next: (response) => {
-        console.log(response);
-        if (response.success) {
-          localStorage.setItem('token', response.token);
-          localStorage.setItem('userDetails', response.user.username);
-          this.router.navigate(['/home']);
-        } else {
-          this.errorMessage = response.message;
-        }
-      },
-      error: (error) => {
-        console.error('An error occurred:', error);
-        this.errorMessage = 'An error occurred. Please try again later.';
-      }
-    });
+    this.authService
+      .login(this.loginForm.value.username, this.loginForm.value.password)
+      .subscribe({
+        next: (response: any) => {
+          console.log(response);
+          if (response.success) {
+            localStorage.setItem('token', response.token);
+            localStorage.setItem('userDetails', response.user.username);
+            this.router.navigate(['/home']);
+          } else {
+            this.errorMessage = [
+              { severity: 'error', summary: 'Error', detail: response.message },
+            ];
+          }
+        },
+        error: (error: any) => {
+          console.error('An error occurred:', error);
+          this.errorMessage = [
+            {
+              severity: 'error',
+              summary: 'Error',
+              detail: 'An error occurred. Please try again later.',
+            },
+          ];
+        },
+      });
   }
   isFieldInvalid(field: string): any {
     const formControl = this.loginForm.get(field);
-    return formControl && formControl.invalid && (formControl.dirty || formControl.touched);
+    return (
+      formControl &&
+      formControl.invalid &&
+      (formControl.dirty || formControl.touched)
+    );
   }
 
   onFieldBlur(field: string): void {
@@ -61,4 +75,3 @@ export class LoginComponent {
     }
   }
 }
-
