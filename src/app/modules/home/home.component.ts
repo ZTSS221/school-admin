@@ -4,10 +4,7 @@ import { Table } from 'primeng/table';
 import { HomeService } from 'src/app/services/home.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-interface classes {
-  name: string;
-  value: string;
-}
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -16,7 +13,20 @@ interface classes {
 export class HomeComponent {
   @ViewChild('dt') dataTable!: Table;
   studentForm!: FormGroup;
-  classTypes: classes[] | undefined;
+  classTypes: any = [
+    {
+      name: 'KGs',
+      value: 'kgs',
+    },
+    {
+      name: 'Primary',
+      value: 'primary',
+    },
+    {
+      name: 'Secondary',
+      value: 'secondary',
+    },
+  ];
   selectedClassType: any;
   selectedYear: any;
   classes: any;
@@ -58,13 +68,22 @@ export class HomeComponent {
         science: ['', Validators.required],
       }),
     });
-    this.getClassTypes();
+
     this.getClassesByclassType();
     if (this.students.length == 0) {
       this.getAllStudents();
     }
   }
+  onChangeClass(ev:any){
+    this.getAllStudents()
+  }
+  onYearChange(event: any) {
+    // Handle the year change event here
+    this.getAllStudents()
+    console.log(this.selectedYear);
+  }
   onChangeFilter(ev: any) {
+    this.getAllStudents()
     if (ev.value != null) {
       const filteredClasses = this.classArray.filter((cls: any) => {
         return cls.type == ev.value.value;
@@ -80,15 +99,16 @@ export class HomeComponent {
       stringVal
     );
   }
-  openNew() {
+
+  openAddStudentModal() {
     this.visible = true;
   }
 
   deleteStudent(event: any, id: any) {
-    this.deleteConfirmDialogue(event, id);
+    this.deleteConfirm(event, id);
   }
 
-  deleteConfirmDialogue(event: Event, id: any) {
+  deleteConfirm(event: Event, id: any) {
     this.confirmationService.confirm({
       target: event.target as EventTarget,
       message: 'Are you sure that you want to delete?',
@@ -106,6 +126,7 @@ export class HomeComponent {
       reject: () => {},
     });
   }
+
   addStudent() {
     this.studentForm.patchValue({
       id: this.generateRandomString(10),
@@ -128,7 +149,7 @@ export class HomeComponent {
     }
   }
 
-  onClearFilter(ev: any) {
+  clearFilter(ev: any) {
     this.selectedClassType = undefined;
     this.selectedClass = undefined;
     this.classes = [];
@@ -137,13 +158,6 @@ export class HomeComponent {
     this.getAllStudents();
   }
 
-  getClassTypes() {
-    this.homeService.getClassType().subscribe({
-      next: (response: any) => {
-        this.classTypes = response;
-      },
-    });
-  }
   getClassesByclassType() {
     this.homeService.getClasses().subscribe({
       next: (response: any) => {
@@ -152,7 +166,7 @@ export class HomeComponent {
     });
   }
 
-  onSubmitFilters() {
+  applyFilters() {
     const dateString = this.selectedYear;
     const date = new Date(dateString);
     const year = date.getFullYear();
@@ -186,6 +200,7 @@ export class HomeComponent {
 
     return result;
   }
+
   getClassCategory(className: any) {
     if (className.toLowerCase().includes('kg')) {
       return 'kgs';
@@ -201,8 +216,8 @@ export class HomeComponent {
     }
   }
 
-  viewStudent(student: any) {
-    this.router.navigate(['/student-profile/'+student.id]);
+  navigate(student: any) {
+    this.router.navigate(['/student-profile/' + student.id]);
     this.homeService.sendTabChangeEvent(student);
   }
 

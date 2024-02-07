@@ -6,14 +6,14 @@
         pRipple
         label="Add Student"
         class="btn-primary p-button-success mr-2 me-5px"
-        (click)="openNew()"
+        (click)="openAddStudentModal()"
       ></button>
     </ng-template>
     <div class="d-flex justify-content-center align-items-center my-10px">
       <div class="me-5px">
         <p-dropdown
           (onChange)="onChangeFilter($event)"
-          (onClear)="onClearFilter($event)"
+          (onClear)="clearFilter($event)"
           [options]="classTypes"
           [(ngModel)]="selectedClassType"
           optionLabel="name"
@@ -23,6 +23,7 @@
       </div>
       <div class="me-5px">
         <p-calendar
+
           [(ngModel)]="selectedYear"
           view="year"
           placeholder="Select Year"
@@ -30,10 +31,12 @@
           inputId="yearpicker"
           [disabled]="isCalenderActive"
           [maxDate]="maxDate"
+          (onSelect)="onYearChange($event)"
         ></p-calendar>
       </div>
       <div class="me-5px">
         <p-dropdown
+        (onChange)="onChangeClass($event)"
           [options]="classes"
           [(ngModel)]="selectedClass"
           optionLabel="className"
@@ -44,12 +47,12 @@
       <p-button
         [disabled]="!selectedClassType || !selectedYear || !selectedClass"
         class="me-5px"
-        (onClick)="onSubmitFilters()"
+        (onClick)="applyFilters()"
         label="Submit"
       ></p-button>
       <p-button
         *ngIf="selectedClassType || selectedYear || selectedClass"
-        (onClick)="onClearFilter($event)"
+        (onClick)="clearFilter($event)"
         label="Clear Filter"
       ></p-button>
     </div>
@@ -144,11 +147,16 @@
             pRipple
             label="View"
             class="btn-primary p-button-primary"
-            (click)="viewStudent(student)"
+            (click)="navigate(student)"
           ></button>
         </td>
       </tr>
     </ng-template>
+    <ng-template pTemplate="emptymessage">
+      <tr>
+          <td class="text-center" colspan="7">No Student found.</td>
+      </tr>
+  </ng-template>
     <ng-template pTemplate="summary">
       <div class="flex align-items-center justify-content-between">
         In total there are {{ students ? students.length : 0 }} students.
