@@ -41,7 +41,6 @@ export class HomeComponent {
   ) {
     const currentYear = new Date().getFullYear();
     this.maxDate = new Date(currentYear, 11, 31);
-    console.log(this.maxDate);
   }
 
   ngOnInit() {
@@ -61,13 +60,11 @@ export class HomeComponent {
     });
     this.getClassTypes();
     this.getClassesByclassType();
-    console.log(this.students.length == 0);
     if (this.students.length == 0) {
       this.getAllStudents();
     }
   }
   onChangeFilter(ev: any) {
-    console.log(ev.value);
     if (ev.value != null) {
       const filteredClasses = this.classArray.filter((cls: any) => {
         return cls.type == ev.value.value;
@@ -78,7 +75,6 @@ export class HomeComponent {
     }
   }
   applyFilterGlobal($event: any, stringVal: any) {
-    console.log(($event.target as HTMLInputElement).value);
     this.dataTable.filterGlobal(
       ($event.target as HTMLInputElement).value,
       stringVal
@@ -132,12 +128,7 @@ export class HomeComponent {
     }
   }
 
-  onYearChange(event: any) {
-    // Handle the year change event here
-    console.log(this.selectedYear);
-  }
   onClearFilter(ev: any) {
-    console.log(ev);
     this.selectedClassType = undefined;
     this.selectedClass = undefined;
     this.classes = [];
@@ -165,23 +156,6 @@ export class HomeComponent {
     const dateString = this.selectedYear;
     const date = new Date(dateString);
     const year = date.getFullYear();
-    console.log(year);
-
-    // this.homeService
-    //   .getStudents(
-    //     this.selectedClassType.value,
-    //     year,
-    //     this.selectedClass.classValue
-    //   )
-    //   .subscribe({
-    //     next: (response) => {
-    //       console.log(response);
-    //       this.students = response;
-    //     },
-    //     error: (error) => {
-    //       console.error('An error occurred:', error);
-    //     },
-    //   });
     this.students = this.students.filter((student: any) => {
       return (
         student.type == this.selectedClassType.value &&
@@ -232,14 +206,7 @@ export class HomeComponent {
     this.homeService.sendTabChangeEvent(student);
   }
 
-  onEditStart(event: any) {
-    console.log('Editing started', event);
-    // You can perform any actions you need when editing starts here
-  }
-
   onEditComplete(event: any) {
-    console.log('Editing completed', event);
-    // You can perform any actions you need when editing completes here
     this.homeService.saveArrayData('students', this.students);
   }
 }

@@ -23,7 +23,6 @@
       </div>
       <div class="me-5px">
         <p-calendar
-          (onSelect)="onYearChange($event)"
           [(ngModel)]="selectedYear"
           view="year"
           placeholder="Select Year"
@@ -66,7 +65,6 @@
     [(selection)]="selectedStudents"
     [rowHover]="true"
     dataKey="id"
-    currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
     [showCurrentPageReport]="true"
     (onEditComplete)="onEditComplete($event)"
   >

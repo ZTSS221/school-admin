@@ -16,13 +16,9 @@ export class HomeService {
     classYear: any,
     studentClass: any
   ): Observable<any> {
-    // console.log(classType, classYear, studentClass);
 
     return this.http.get<any>('./assets/data/students.json').pipe(
       map((data: any) => {
-        // console.log(data);
-
-        // Filter students based on provided parameters
         return data.filter((student: any) => {
           return (
             student.type == classType &&

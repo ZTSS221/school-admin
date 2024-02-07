@@ -36,7 +36,6 @@ export class LoginComponent {
       .login(this.loginForm.value.username, this.loginForm.value.password)
       .subscribe({
         next: (response: any) => {
-          console.log(response);
           if (response.success) {
             localStorage.setItem('token', response.token);
             localStorage.setItem('userDetails', response.user.username);
