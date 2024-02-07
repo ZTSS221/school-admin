@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { DataSharingService } from 'src/app/services/data-sharing.service';
+import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
+import { HomeService } from 'src/app/services/home.service';
 
 @Component({
   selector: 'app-student-profile',
@@ -10,12 +11,19 @@ import { Subscription } from 'rxjs';
 export class StudentProfileComponent {
   studentDetails: any;
   subscription!: Subscription;
-  constructor(private dataSharingService: DataSharingService) {
-    this.subscription = this.dataSharingService.tabChangeEvent$.subscribe(
+  constructor(private homeService: HomeService, private route: ActivatedRoute) {
+    this.subscription = this.homeService.tabChangeEvent$.subscribe(
       (student: any) => {
         this.studentDetails = student;
       }
     );
   }
-  ngOnInit() {}
+  ngOnInit() {
+    const id = this.route.snapshot.params['id'];
+
+    if (!this.studentDetails) {
+      let data = this.homeService.getArrayData('students') || [];
+      this.studentDetails = this.homeService.getStudentById(id, data);
+    }
+  }
 }

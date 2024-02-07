@@ -4,7 +4,6 @@ import { Table } from 'primeng/table';
 import { HomeService } from 'src/app/services/home.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { DataSharingService } from 'src/app/services/data-sharing.service';
 interface classes {
   name: string;
   value: string;
@@ -35,7 +34,6 @@ export class HomeComponent {
 
   constructor(
     private homeService: HomeService,
-    private dataSharingService: DataSharingService,
     private router: Router,
     private confirmationService: ConfirmationService,
     private formBuilder: FormBuilder,
@@ -194,11 +192,11 @@ export class HomeComponent {
   }
   getAllStudents() {
     this.homeService.getAllStudents().subscribe({
-      next: (res) => {
+      next: (res: any) => {
         this.students = res;
         this.homeService.saveArrayData('students', this.students);
       },
-      error: (err) => {},
+      error: (err: any) => {},
     });
   }
   generateRandomString(length: any) {
@@ -228,10 +226,12 @@ export class HomeComponent {
       }
     }
   }
+
   viewStudent(student: any) {
-    this.router.navigate(['/student-profile']);
-    this.dataSharingService.sendTabChangeEvent(student);
+    this.router.navigate(['/student-profile/'+student.id]);
+    this.homeService.sendTabChangeEvent(student);
   }
+
   onEditStart(event: any) {
     console.log('Editing started', event);
     // You can perform any actions you need when editing starts here

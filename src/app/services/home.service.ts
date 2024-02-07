@@ -6,6 +6,9 @@ import { BehaviorSubject, Observable, map } from 'rxjs';
   providedIn: 'root',
 })
 export class HomeService {
+  private tabChangeEventSource = new BehaviorSubject<any>(null);
+  tabChangeEvent$ = this.tabChangeEventSource.asObservable();
+
   constructor(private http: HttpClient) {}
 
   getStudents(
@@ -38,14 +41,20 @@ export class HomeService {
     );
   }
 
-  getStudentById(userId: any): Observable<any> {
-    return this.http.get<any>('./assets/data/students.json').pipe(
-      map((data: any) => {
-        return data.filter((student: any) => {
-          return student.id == userId;
-        });
-      })
-    );
+  getStudentById(userId: any, data?: any): Observable<any> {
+    if (!data) {
+      return this.http.get<any>('./assets/data/students.json').pipe(
+        map((data: any) => {
+          return data.filter((student: any) => {
+            return student.id == userId;
+          });
+        })
+      );
+    } else {
+      return data.filter((student: any) => {
+        return student.id == userId;
+      })?.[0];
+    }
   }
 
   getClassType(): Observable<any> {
@@ -79,4 +88,7 @@ export class HomeService {
     sessionStorage.removeItem(key);
   }
 
+  sendTabChangeEvent(student: any) {
+    this.tabChangeEventSource.next(student);
+  }
 }
