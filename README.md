@@ -33,4 +33,7 @@ To log in, follow these steps:
 
 1. **Access Login Page:** Go to the login page. You can typically find the login page by navigating to our website's homepage, or by directly accessing the login URL provided `/auth/login`.
 
-2. **Enter Credentials:** Once you're on the login page, enter your registered username and password in the designated fields. These credentials should match the ones stored in the `userData.json` file in our project.
+2. **Enter Credentials:** Once you're on the login page, enter your registered username and password in the designated fields. These credentials should match the ones stored in the `usersData.json` file in our project.
+
+**Username:** Admin
+**Password:** Admin@123

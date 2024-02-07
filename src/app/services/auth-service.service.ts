@@ -9,10 +9,12 @@ export class AuthServiceService {
   constructor(private http: HttpClient) {}
 
   login(username: string, password: string): Observable<any> {
-    return this.http.get<any>('./assets/data/adminData.json').pipe(
+    return this.http.get<any>('./assets/data/usersData.json').pipe(
       map((users) => {
         const user = users.find(
-          (u: any) => u.username === username && u.password === password
+          (u: any) =>
+            u.username.toLowerCase() === username.toLowerCase() &&
+            u.password === password
         );
         if (user) {
           const token = this.generateRandomToken(username, password);
